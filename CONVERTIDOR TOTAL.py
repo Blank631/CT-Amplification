@@ -9,7 +9,7 @@ import SimpleITK as sitk
 import os
 
 # Ruta a la carpeta con los DICOMs (una serie completa)
-dicom_folder = 'C://Users//Azul8//OneDrive//Escritorio//unet imagenes//Rosalba//10000184'  # Reemplaza con tu ruta
+dicom_folder = 'C://Users//Azul8//OneDrive//Escritorio//unet imagenes//Rosalba//10000184'  # Reemplaza con tu ruta de tomografia
 
 # Leer la serie DICOM
 reader = sitk.ImageSeriesReader()
@@ -67,7 +67,7 @@ np.save('C://Users//Azul8//OneDrive//Escritorio//unet imagenes//archivos numpy//
 ##########################################################################
 ###APLICAR EL MODELO
 from tensorflow.keras.models import load_model
-my_model = load_model('ich.h5', compile=False)
+my_model = load_model('aa.h5', compile=False)
 
 
 test_img_input = np.expand_dims(image_resized, axis=0)
